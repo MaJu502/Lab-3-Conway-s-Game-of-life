@@ -27,7 +27,7 @@ def pixel(x, y, color):
 
 #generar patron inicial
 coords_patron_inicial = [] #patron inicial
-temp = random.randint(0,500)
+temp = random.randint(0,800)
 for i in range(round(h/10)):
     temp_fila = []
     for i in range(round(w/10)):
@@ -40,11 +40,32 @@ for i in range(1, temp):
     cord_random_y = random.randint(0, 59)
     coords_patron_inicial[cord_random_y][cord_random_x] = 1
 
-
+#patron penta decathol
+coords_patron_inicial[20][20] = 1
+coords_patron_inicial[20][21] = 1
+coords_patron_inicial[20][22] = 1
+coords_patron_inicial[21][20] = 1
+coords_patron_inicial[21][22] = 1
+coords_patron_inicial[22][20] = 1
+coords_patron_inicial[22][21] = 1
+coords_patron_inicial[22][22] = 1
+coords_patron_inicial[23][20] = 1
+coords_patron_inicial[23][21] = 1
+coords_patron_inicial[23][22] = 1
+coords_patron_inicial[24][20] = 1
+coords_patron_inicial[24][21] = 1
+coords_patron_inicial[24][22] = 1
+coords_patron_inicial[25][20] = 1
+coords_patron_inicial[25][21] = 1
+coords_patron_inicial[25][22] = 1
+coords_patron_inicial[26][20] = 1
+coords_patron_inicial[26][22] = 1
+coords_patron_inicial[27][20] = 1
+coords_patron_inicial[27][21] = 1
+coords_patron_inicial[27][22] = 1
 
 
 def Conway(copia_celdas, size):
-    print('hola')
     for j, row in enumerate(copia_celdas):
         for i, cell in enumerate(row):
             #recorrer todas las copia_celdas para verificar condiciones de juego
